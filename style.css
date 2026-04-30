@@ -1,0 +1,28 @@
+/* Temel Ayarlar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar ve Footer Siyahı */
+.bg-black {
+    background-color: #0a0a0a !important;
+}
+
+/* Ana Sayfa Karşılama Alanı (Görünürlük) */
+.custom-hero {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Kart Hover Efekti (Geri Bildirim) */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #444;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, 0.2);
+}
