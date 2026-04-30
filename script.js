@@ -1,47 +1,33 @@
-// 1. Navbar Giriş Uyarı Sistemi
-function girisUyarisi() {
-    alert("Giriş sistemi şu an yapım aşamasındadır. Lütfen ilanlara üye olmadan göz atın.");
+// 1. GİRİŞ VE KAYIT EKRANI SİMÜLASYONU (index.html)
+function sahteGiris(event) {
+    event.preventDefault(); // Sayfanın yenilenmesini durdurur
+    alert("Sunucu ile bağlantı kurulamadı. Lütfen daha sonra tekrar deneyiniz.");
 }
 
-// 2. Ürün Detay Sayfası - Satın Alma Simülasyonu
-function satinAl() {
-    let onay = confirm("Bu ürünü satın almak istediğinize emin misiniz?");
-    if(onay) {
-        alert("HATA: Cüzdanınızda yeterli bakiye bulunmuyor. Lütfen Cüzdanım sayfasından bakiye yükleyiniz.");
-    } else {
-        alert("İşlem iptal edildi.");
-    }
-}
-
-// 3. Pazar Yeri Sayfası - Kategori Filtreleme Sistemi
+// 2. PAZAR YERİ İLAN FİLTRELEME (marketplace.html)
 function filtrele(kategori) {
     let ilanlar = document.querySelectorAll('.ilan-karti');
-    
     ilanlar.forEach(function(ilan) {
         if (kategori === 'hepsi' || ilan.getAttribute('data-kategori') === kategori) {
-            ilan.style.display = 'block'; 
+            ilan.style.display = 'block';
         } else {
-            ilan.style.display = 'none'; 
+            ilan.style.display = 'none';
         }
     });
 }
 
-// 4. Cüzdan Sayfası - Bakiye Yükleme Mantığı
-let mevcutBakiye = 0.00;
+// 3. ÜRÜN SATIN ALMA UYARISI (product-detail.html)
+function satinAl() {
+    alert("İşlem Başarısız: Cüzdanınızda yeterli bakiye bulunmamaktadır.");
+}
 
+// 4. CÜZDAN BAKİYE YÜKLEME (wallet.html)
 function bakiyeYukle() {
-    let miktar = prompt("Yüklemek istediğiniz tutarı giriniz (TL):");
-    
-    // Geçerli bir sayı girilip girilmediğinin kontrolü
-    if (miktar !== null && miktar.trim() !== "" && !isNaN(miktar) && miktar > 0) {
-        mevcutBakiye += parseFloat(miktar);
-        // HTML'deki bakiye ekranını bul ve güncelle
-        let bakiyeEkrani = document.getElementById('bakiye-ekrani');
-        if (bakiyeEkrani) {
-            bakiyeEkrani.innerText = mevcutBakiye.toFixed(2) + " TL";
-        }
-        alert(miktar + " TL başarıyla cüzdanınıza eklendi!");
+    let miktar = prompt("Yüklemek istediğiniz tutarı girin (TL):");
+    if (miktar !== null && miktar !== "" && !isNaN(miktar) && Number(miktar) > 0) {
+        document.getElementById('bakiye-ekrani').innerText = Number(miktar).toFixed(2) + " TL";
+        alert("İşlem Başarılı! Bakiyeniz güncellendi.");
     } else {
-        alert("Geçersiz bir tutar girdiniz. Lütfen geçerli bir sayı girin.");
+        alert("Hata: Lütfen geçerli bir sayı giriniz.");
     }
 }

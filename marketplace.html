@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pazar Yeri - OyunPazar</title>
+    <title>İlanlar - OyunPazar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark text-light">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
         <div class="container">
-            <a class="navbar-brand text-warning fw-bold" href="index.html">OyunPazar</a>
+            <a class="navbar-brand text-warning fw-bold" href="index.html"><i class="fas fa-gamepad me-2"></i>OyunPazar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
                     <li class="nav-item"><a class="nav-link active" href="marketplace.html">Pazar Yeri</a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html">Cüzdanım</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="btn btn-outline-warning" href="wallet.html"><i class="fas fa-wallet me-1"></i> Cüzdanım</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5 mb-5">
-        <h2 class="border-bottom border-secondary pb-2 mb-4">Tüm İlanlar</h2>
+        <h2 class="mb-4 text-white"><i class="fas fa-store me-2 text-warning"></i>İlan Pazarı</h2>
         
         <div class="row mb-4">
             <div class="col-md-12 d-flex flex-wrap gap-2">
-                <button class="btn btn-warning" onclick="filtrele('hepsi')">Tüm İlanlar</button>
-                <button class="btn btn-outline-warning" onclick="filtrele('csgo')">CS:GO</button>
+                <button class="btn btn-warning fw-bold" onclick="filtrele('hepsi')">Tüm İlanlar</button>
+                <button class="btn btn-outline-warning" onclick="filtrele('cs2')">CS2</button>
                 <button class="btn btn-outline-warning" onclick="filtrele('valorant')">Valorant</button>
                 <button class="btn btn-outline-warning" onclick="filtrele('ko')">Knight Online</button>
             </div>
@@ -39,58 +42,60 @@
 
         <div class="row g-4" id="ilanlar-kutusu">
             
-            <div class="col-md-3 col-sm-6 ilan-karti" data-kategori="csgo">
-                <div class="card bg-secondary text-white custom-card h-100">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffc107?text=AK-47+Redline" class="card-img-top" alt="Item">
-                    <div class="card-body d-flex flex-column">
-                        <h6 class="card-title text-warning">AK-47 | Redline</h6>
-                        <h5 class="mb-3 mt-auto">450.00 TL</h5>
-                        <a href="product-detail.html" class="btn btn-dark w-100 border border-warning">İncele</a>
+            <div class="col-md-3 col-sm-6 ilan-karti" data-kategori="cs2">
+                <div class="ilan-karti-inner">
+                    <img src="img/ak47redline-ilan.png" class="ilan-bg-img" alt="AK-47 Redline">
+                    <div class="ilan-content">
+                        <span class="badge bg-warning text-dark w-50 mb-2">CS2</span>
+                        <h5 class="text-white fw-bold">AK-47 | Redline</h5>
+                        <p class="text-secondary small">Görevde Kullanılmış</p>
+                        <h4 class="text-success mt-auto mb-3">450.00 TL</h4>
+                        <a href="product-detail.html" class="btn btn-outline-light w-100">İncele</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-3 col-sm-6 ilan-karti" data-kategori="valorant">
-                <div class="card bg-secondary text-white custom-card h-100">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffc107?text=Asil+Vandal" class="card-img-top" alt="Item">
-                    <div class="card-body d-flex flex-column">
-                        <h6 class="card-title text-warning">Asil Vandal</h6>
-                        <h5 class="mb-3 mt-auto">1,250.00 TL</h5>
-                        <a href="product-detail.html" class="btn btn-dark w-100 border border-warning">İncele</a>
+                <div class="ilan-karti-inner">
+                    <img src="img/asilvandal-ilan.png" class="ilan-bg-img" alt="Asil Vandal">
+                    <div class="ilan-content">
+                        <span class="badge bg-danger text-white w-50 mb-2">Valorant</span>
+                        <h5 class="text-white fw-bold">Asil Vandal</h5>
+                        <p class="text-secondary small">Max Seviye</p>
+                        <h4 class="text-success mt-auto mb-3">850.00 TL</h4>
+                        <a href="#" class="btn btn-outline-light w-100">İncele</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 ilan-karti" data-kategori="cs2">
+                <div class="ilan-karti-inner">
+                    <img src="img/awpasimov-ilan.png" class="ilan-bg-img" alt="AWP Asiimov">
+                    <div class="ilan-content">
+                        <span class="badge bg-warning text-dark w-50 mb-2">CS2</span>
+                        <h5 class="text-white fw-bold">AWP | Asiimov</h5>
+                        <p class="text-secondary small">Savaş Görmüş</p>
+                        <h4 class="text-success mt-auto mb-3">1,250.00 TL</h4>
+                        <a href="product-detail.html" class="btn btn-outline-light w-100">İncele</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 col-sm-6 ilan-karti" data-kategori="ko">
-                <div class="card bg-secondary text-white custom-card h-100">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffc107?text=Raptor+%2B8" class="card-img-top" alt="Item">
-                    <div class="card-body d-flex flex-column">
-                        <h6 class="card-title text-warning">Raptor +8</h6>
-                        <h5 class="mb-3 mt-auto">3,500.00 TL</h5>
-                        <a href="product-detail.html" class="btn btn-dark w-100 border border-warning">İncele</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 ilan-karti" data-kategori="csgo">
-                <div class="card bg-secondary text-white custom-card h-100">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffc107?text=AWP+Asiimov" class="card-img-top" alt="Item">
-                    <div class="card-body d-flex flex-column">
-                        <h6 class="card-title text-warning">AWP | Asiimov</h6>
-                        <h5 class="mb-3 mt-auto">1,250.00 TL</h5>
-                        <a href="product-detail.html" class="btn btn-dark w-100 border border-warning">İncele</a>
+                <div class="ilan-karti-inner">
+                    <img src="img/raptor-ilan.png" class="ilan-bg-img" alt="Raptor +8">
+                    <div class="ilan-content">
+                        <span class="badge bg-info text-dark w-75 mb-2">Knight Online</span>
+                        <h5 class="text-white fw-bold">Raptor +8</h5>
+                        <p class="text-secondary small">Sirius Sunucusu</p>
+                        <h4 class="text-success mt-auto mb-3">3,000.00 TL</h4>
+                        <a href="#" class="btn btn-outline-light w-100">İncele</a>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <footer class="bg-black text-center py-4 mt-auto border-top border-secondary">
-        <div class="container">
-            <p class="mb-0 text-muted">&copy; 2026 OyunPazar Projesi.</p>
-        </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
