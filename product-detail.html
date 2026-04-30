@@ -2,63 +2,40 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ürün Detayı - OyunPazar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
         <div class="container">
             <a class="navbar-brand text-warning fw-bold" href="index.html"><i class="fas fa-gamepad me-2"></i>OyunPazar</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="marketplace.html">Pazar Yeri</a></li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="btn btn-outline-warning" href="wallet.html"><i class="fas fa-wallet me-1"></i> Cüzdanım</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto"><li class="nav-item"><a class="btn btn-outline-warning" href="wallet.html">Cüzdanım</a></li></ul>
         </div>
     </nav>
 
     <div class="container mt-5 mb-5">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="marketplace.html" class="text-warning text-decoration-none">Pazar Yeri</a></li>
-                <li class="breadcrumb-item text-secondary">CS2</li>
-                <li class="breadcrumb-item active text-white" aria-current="page">AWP Asiimov</li>
-            </ol>
-        </nav>
-
-        <div class="row mt-4">
+        <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="bg-black border border-secondary rounded p-5 text-center h-100 d-flex align-items-center justify-content-center">
-                    <img src="img/awpasimov-ilan.png" class="img-fluid" alt="AWP Asiimov">
+                <div class="bg-black border border-secondary rounded p-5 text-center">
+                    <img id="urun-resim" src="" class="img-fluid" style="max-height: 400px; object-fit: contain;">
                 </div>
             </div>
-            
-            <div class="col-md-6 mt-4 mt-md-0">
-                <span class="badge bg-warning text-dark mb-2 px-3 py-2">CS2 Item</span>
-                <h2 class="text-white fw-bold">AWP | Asiimov</h2>
-                <p class="text-secondary">Savaş Görmüş (Battle-Scarred) - Float: 0.54</p>
-                <h3 class="text-success fw-bold mb-4">1,250.00 TL</h3>
+            <div class="col-md-6">
+                <span id="urun-oyun-etiket" class="badge mb-2 px-3 py-2"></span>
+                <h2 id="urun-baslik" class="text-white fw-bold"></h2>
+                <h3 id="urun-fiyat" class="text-success fw-bold mb-3"></h3>
                 
                 <div class="bg-dark p-3 rounded mb-4 border border-secondary">
-                    <p class="mb-1 text-secondary"><i class="fas fa-user-shield me-2"></i>Satıcı Bilgileri</p>
-                    <p class="mb-0 text-white fw-bold">ProGamer99 <span class="badge bg-success ms-2">Güvenilir Satıcı</span></p>
+                    <p class="mb-1 text-secondary small"><i class="fas fa-user-circle me-2"></i>Satıcı:</p>
+                    <h6 id="satici-nick" class="text-white m-0 fw-bold"></h6>
                 </div>
-                
-                <button class="btn btn-warning btn-lg w-100 fw-bold mt-2" onclick="satinAl()">
-                    <i class="fas fa-shopping-cart me-2"></i>Hemen Satın Al
-                </button>
+
+                <button class="btn btn-warning btn-lg w-100 fw-bold" onclick="satinAl()"><i class="fas fa-shopping-cart me-2"></i>Hemen Satın Al</button>
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
