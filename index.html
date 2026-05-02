@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DropDeal | İtem Pazarı</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar nav1 sticky-top py-3 position-relative">
+            <div class="container d-flex justify-content-between align-items-center">
+                <button class="btn btn-link text-white fs-4 p-0 text-decoration-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#gizliMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a class="navbar-brand m-0 p-0 text-white d-flex align-items-center position-absolute top-50 start-50 translate-middle" href="#">
+                    <span class="logodd me-2">DD</span> <span class="fw-bold fs-5 tracking-wide">DropDeal</span>
+                </a>
+
+                <a href="#" class="btn btn-dark border border-secondary rounded-pill d-flex align-items-center py-1 px-2 text-decoration-none">
+                    <img src="img2/leon-avatar.jpg" alt="Profil" class="rounded-circle me-2" width="40" height="40" style="object-fit: cover;">
+                    <div class="d-flex flex-column text-start" style="line-height: 1.2;">
+                        <span class="text-secondary fw-bold" style="font-size: 11px;">HESABIM</span>
+                        <span class="text-white fw-bold" style="font-size: 14px;">Leon S. Kennedy</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start offcanvas-dark" id="gizliMenu">
+            <div class="offcanvas-header border-bottom border-dark">
+                <h5 class="offcanvas-title fw-bold"><span class="text-warning">DD</span> Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <a href="#" class="nav-link text-white fs-5 mb-3"><i class="fas fa-home text-warning me-3"></i>Ana Sayfa</a>
+                <a href="#" class="nav-link text-white fs-5 mb-3"><i class="fas fa-store text-warning me-3"></i>Pazar Yeri</a>
+                <hr class="border-secondary">
+                <a href="#" class="nav-link text-light fs-5 mb-3"><i class="fas fa-sign-in-alt text-secondary me-3"></i>Giriş Yap</a>
+                <a href="#" class="nav-link text-warning fs-5 fw-bold"><i class="fas fa-user-plus text-warning me-3"></i>Kayıt Ol</a>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div id="kampanyaSlider" class="carousel slide kampanyakutu" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#kampanyaSlider" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#kampanyaSlider" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#kampanyaSlider" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="slidericerik">
+                            <h1 class="display-5 fw-bold text-white mb-2">Oyun Dünyasının En Güvenli Pazarı</h1>
+                            <p class="text-secondary fs-5 mb-4">Dijital eşyalarını güvenle alıp sat.</p>
+                            <a href="#" class="btn btn-warning btn-lg fw-bold px-4">Tüm İlanları Gör</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="slidericerik">
+                            <span class="badge bg-danger mb-3 px-3 py-2 fs-6">Günün Fırsatı</span>
+                            <h1 class="display-5 fw-bold text-white mb-2">CS2 - AK-47 | Redline</h1>
+                            <h3 class="text-secondary text-decoration-line-through d-inline-block me-2">800 TL</h3>
+                            <h2 class="text-success fw-bold d-inline-block mb-4">450 TL</h2>
+                            <br>
+                            <a href="#" class="btn btn-outline-light btn-lg fw-bold px-4">Fırsatı İncele</a>
+                        </div>    
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="slidericerik">
+                            <span class="badge bg-info text-dark mb-3 px-3 py-2 fs-6">Haftanın İndirimi</span>
+                            <h1 class="display-5 fw-bold text-white mb-2">Valorant - Asil Vandal</h1>
+                            <h3 class="text-secondary text-decoration-line-through d-inline-block me-2">1,200 TL</h3>
+                            <h2 class="text-success fw-bold d-inline-block mb-4">850 TL</h2>
+                            <br>
+                            <a href="#" class="btn btn-outline-light btn-lg fw-bold px-4">Fırsatı İncele</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#kampanyaSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#kampanyaSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <h3 class="text-white mb-4 fw-bold"><i class="fas fa-gamepad text-warning me-2"></i>Popüler Kategoriler</h3>
+
+            <div class="bento-izgara">
+                <a href="#" class="bento-kutu bento-cs2">
+                    <img src="img2/cs2-bg.jpg" class="bento-bg" alt="CS2">
+                    <div class="bento-yazi">
+                        <h2 class="fw-bold text-warning mb-1">CS2</h2>
+                        <span class="text-light opacity-75">Skin & Bıçaklar</span>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-kutu bento-valo">
+                    <img src="img2/valo-bg.jpg" class="bento-bg" alt="Valorant">
+                    <div class="bento-yazi">
+                        <h3 class="fw-bold text-danger mb-1">VALORANT</h3>
+                        <span class="text-light opacity-75">VP & Kaplamalar</span>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-kutu bento-ko">
+                    <img src="img2/ko-bg.jpg" class="bento-bg" alt="Knight Online">
+                    <div class="bento-yazi">
+                        <h3 class="fw-bold text-info mb-1">KNIGHT ONLINE</h3>
+                        <span class="text-light opacity-75">GB & İtemler</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <footer class="bg-black py-4 mt-5 border-top border-dark text-center">
+            <div class="container">
+                <h5 class="fw-bold mb-3"><span class="text-warning">DD</span> DropDeal</h5>
+                <p class="text-secondary small mb-0">&copy; 2026 DropDeal. Tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

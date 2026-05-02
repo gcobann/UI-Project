@@ -1,0 +1,114 @@
+body
+{
+    background-color: #0a0a0a; 
+    color: #fff; 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+}
+
+.nav1
+{
+    background-color: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logodd
+{
+    font-size: 1.8rem; 
+    font-weight: 900; 
+    letter-spacing: -1px; 
+    color: #ffb700; 
+    text-shadow: 0 0 10px rgba(255, 183, 0, 0.3); 
+}
+
+.offcanvas-dark
+{
+    background-color: #111; 
+    color: #fff; 
+    border-right: 1px solid #222; 
+}
+
+.kampanyakutu
+{
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.slidericerik
+{
+    height: 380px;
+    background: linear-gradient(135deg, #151515, #080808);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.bento-izgara
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+}
+
+.bento-cs2 { grid-column: 1 / 2; grid-row: 1 / 3; }
+.bento-valo { grid-column: 2 / 3; grid-row: 1 / 2; }
+.bento-ko { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+.bento-kutu
+{
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid #222;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.bento-bg {
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    transition: 0.5s ease;
+    z-index: 1;
+}
+
+.bento-kutu:hover {
+    transform: translateY(-5px);
+    border-color: #ffb700;
+    box-shadow: 0 10px 25px rgba(255, 183, 0, 0.15);
+}
+.bento-kutu:hover .bento-bg {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.bento-yazi {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+.bento-yazi h2 { font-size: 2.5rem; }
+.bento-yazi h3 { font-size: 1.8rem; }
+
+@media (max-width: 768px) {
+    .bento-izgara {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 200px 200px;
+    }
+    .bento-cs2 { grid-column: 1 / 2; grid-row: 1 / 2; }
+    .bento-valo { grid-column: 1 / 2; grid-row: 2 / 3; }
+    .bento-ko { grid-column: 1 / 2; grid-row: 3 / 4; }
+}
