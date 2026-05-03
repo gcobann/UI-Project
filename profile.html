@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hesabım - DropDeal</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar nav1 sticky-top py-3 position-relative">
+            <div class="container d-flex justify-content-between align-items-center">
+                <button class="btn btn-link text-white fs-4 p-0 text-decoration-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#gizliMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <a class="navbar-brand m-0 p-0 text-white d-flex align-items-center position-absolute top-50 start-50 translate-middle" href="index.html">
+                    <span class="logodd me-2">DD</span> <span class="fw-bold fs-5 tracking-wide">DropDeal</span>
+                </a>
+
+                <div class="d-flex align-items-center">
+                <a href="profile.html" class="btn btn-dark border border-secondary rounded-pill d-flex align-items-center py-1 px-2 text-decoration-none me-3">
+                    <img src="img2/leon-avatar.jpg" alt="Profil" class="rounded-circle me-2" width="40" height="40" style="object-fit: cover;">
+                    <div class="d-flex flex-column text-start" style="line-height: 1.2;">
+                        <span class="text-secondary fw-bold" style="font-size: 11px;">HESABIM</span>
+                        <span class="text-white fw-bold" style="font-size: 14px;">Leon S. Kennedy</span>
+                    </div>
+                </a>
+
+                <a href="#" class="nav-link text-white position-relative" data-bs-toggle="offcanvas" data-bs-target="#sepetOffcanvas">
+                    <i class="fas fa-shopping-cart fs-5"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger shadow" id="sepetSayaci" style="font-size: 0.65rem;">
+                        0
+                    </span>
+                </a>
+                </div>
+            </div>
+        </nav>
+
+            <div class="offcanvas offcanvas-start offcanvas-dark" id="gizliMenu">
+                <div class="offcanvas-header border-bottom border-dark">
+                    <h5 class="offcanvas-title fw-bold"><span class="text-warning">DD</span> Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                    <a href="index.html" class="nav-link text-white fs-5 mb-3"><i class="fas fa-home text-warning me-3"></i>Ana Sayfa</a>
+                    <a href="marketplace.html" class="nav-link text-white fs-5 mb-3"><i class="fas fa-store text-warning me-3"></i>Pazar Yeri</a>
+                    <hr class="border-secondary">
+                    <a href="#" class="nav-link text-light fs-5 mb-3" data-bs-toggle="modal" data-bs-target="#authModal">
+                        <i class="fas fa-sign-in-alt text-secondary me-3"></i>Giriş Yap
+                    </a>
+                    <a href="#" class="nav-link text-light fs-5 fw-bold" data-bs-toggle="modal" data-bs-target="#authModal">
+                        <i class="fas fa-sign-in-alt text-warning me-3"></i>Kayıt Ol
+                    </a>
+                </div>
+            </div>
+
+        <div class="container" style="margin-top: 100px; margin-bottom: 50px;">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="bg-dark border border-secondary rounded-4 p-4 text-center mb-4 shadow">
+                        <img src="img2/leon-avatar.jpg" alt="Leon" class="rounded-circle border border-3 border-warning mb-3" width="120" height="120" style="object-fit: cover;">
+                        <h4 class="text-white fw-bold mb-1">Leon S. Kennedy</h4>
+                        <p class="text-secondary mb-3">leon.kennedy@rpd.com</p>
+                        
+                        <div class="bg-black rounded-3 p-3 border border-dark">
+                            <span class="text-secondary d-block mb-1">Mevcut Bakiye</span>
+                            <h3 class="text-success fw-bold mb-0" id="mevcutBakiye">0.00 TL</h3>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark border border-secondary rounded-4 p-2 shadow">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active text-start text-white mb-1 py-3 px-4 rounded-3" id="v-pills-cuzdan-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cuzdan" type="button" role="tab">
+                                <i class="fas fa-wallet text-warning me-2"></i> Cüzdanım
+                            </button>
+                            <button class="nav-link text-start text-white mb-1 py-3 px-4 rounded-3" id="v-pills-ilanlar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ilanlar" type="button" role="tab">
+                                <i class="fas fa-tags text-info me-2"></i> Aktif İlanlarım
+                            </button>
+                            <button class="nav-link text-start text-white py-3 px-4 rounded-3" id="v-pills-gecmis-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gecmis" type="button" role="tab">
+                                <i class="fas fa-history text-success me-2"></i> Satın Alımlarım
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 d-flex flex-column">
+                    <div class="tab-content flex-grow-1" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active h-100" id="v-pills-cuzdan" role="tabpanel">
+                            <div class="bg-dark border border-secondary rounded-4 p-4 shadow h-100">
+                                <h4 class="text-white fw-bold mb-4 border-bottom border-secondary pb-3">Cüzdan İşlemleri</h4>
+                                
+                                <div class="row g-4 mb-5">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-secondary">Yüklenecek Tutar (TL)</label>
+                                        <div class="input-group">
+                                            <input type="number" id="yukleInput" class="form-control bg-black text-white border-secondary" placeholder="Örn: 500">
+                                            <button class="btn btn-warning fw-bold px-4" type="button" onclick="bakiyeGuncelle()">Yükle</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-end">
+                                        <button class="btn btn-outline-danger w-100 fw-bold">Bakiyeyi Çek</button>
+                                    </div>
+                                </div>
+
+                                <h5 class="text-white fw-bold mb-3">Son İşlemler</h5>
+                                <ul class="list-group list-group-flush rounded-3 border border-secondary">
+                                    <li class="list-group-item bg-black text-white border-secondary d-flex justify-content-between align-items-center py-3">
+                                        <div>
+                                            <i class="fas fa-arrow-up text-success me-2"></i> Bakiye Yükleme (Kredi Kartı)
+                                            <small class="d-block text-secondary mt-1">12 Mayıs 2026, 14:30</small>
+                                        </div>
+                                        <span class="text-success fw-bold">+500.00 TL</span>
+                                    </li>
+                                    
+                                    <li class="list-group-item bg-black text-white border-secondary d-flex justify-content-between align-items-center py-3">
+                                        <div>
+                                            <i class="fas fa-arrow-down text-danger me-2"></i> Satın Alım (AK-47 Inheritance)
+                                            <small class="d-block text-secondary mt-1">10 Mayıs 2026, 19:15</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">-2,100.00 TL</span>
+                                    </li>
+
+                                    <li class="list-group-item bg-black text-white border-secondary d-flex justify-content-between align-items-center py-3">
+                                        <div>
+                                            <i class="fas fa-arrow-down text-danger me-2"></i> Satın Alım (8900 VP - Valorant)
+                                            <small class="d-block text-secondary mt-1">08 Mayıs 2026, 21:45</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">-2,300.00 TL</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade h-100" id="v-pills-ilanlar" role="tabpanel">
+                            <div class="bg-dark border border-secondary rounded-4 p-4 shadow h-100">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3 mb-4">
+                                    <h4 class="text-white fw-bold mb-0">Aktif İlanlarım</h4>
+                                    <button class="btn btn-sm btn-info fw-bold"><i class="fas fa-plus me-1"></i> Yeni İlan Ekle</button>
+                                </div>
+                                
+                                <div class="card bg-black border-secondary mb-3">
+                                    <div class="row g-0 align-items-center p-2">
+                                        <div class="col-md-2 text-center">
+                                            <img src="img2/awp-asiimov.png" class="img-fluid rounded-3" alt="CS2" style="height: 60px; object-fit: cover; opacity: 0.8;">
+                                        </div>
+                                        <div class="col-md-6 px-3">
+                                            <h6 class="text-white fw-bold mb-1">AWP | Asiimov (Savaş Görmüş)</h6>
+                                            <span class="badge bg-secondary text-light">CS2 Skin</span>
+                                        </div>
+                                        <div class="col-md-4 text-end px-3">
+                                            <h5 class="text-warning fw-bold mb-1">4,000 TL</h5>
+                                            <button class="btn btn-sm btn-outline-light me-1"><i class="fas fa-edit"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade h-100" id="v-pills-gecmis" role="tabpanel">
+                            <div class="bg-dark border border-secondary rounded-4 p-4 shadow h-100">
+                                <h4 class="text-white fw-bold mb-4 border-bottom border-secondary pb-3">Geçmiş Satın Alımlarım</h4>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-hover align-middle border-secondary text-center">
+                                        <thead>
+                                            <tr class="text-secondary">
+                                                <th>Sipariş No</th>
+                                                <th>Ürün</th>
+                                                <th>Tarih</th>
+                                                <th>Tutar</th>
+                                                <th>Durum</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#DD-9824</td>
+                                                <td class="text-start">8900 VP (Valorant)</td>
+                                                <td>08 Mayıs 2026</td>
+                                                <td class="text-white fw-bold">2,300 TL</td>
+                                                <td><span class="badge bg-success">Teslim Edildi</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>#DD-8711</td>
+                                                <td class="text-start">Iron Necklace (Knight Online)</td>
+                                                <td>01 Mayıs 2026</td>
+                                                <td class="text-white fw-bold">4,240 TL</td>
+                                                <td><span class="badge bg-success">Teslim Edildi</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark border-secondary text-white rounded-4 shadow-lg">
+                    <div class="modal-header border-bottom border-secondary d-flex justify-content-between align-items-center">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active text-warning fw-bold bg-transparent" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab">Giriş Yap</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link text-light fw-bold bg-transparent" id="pills-register-tab" data-bs-toggle="pill" data-bs-target="#pills-register" type="button" role="tab">Kayıt Ol</button>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body p-4">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-login" role="tabpanel">
+                                <div class="mb-3">
+                                    <label class="form-label text-secondary small fw-bold">E-Posta Adresi</label>
+                                    <input type="email" class="form-control bg-black text-white border-secondary" placeholder="leon@kennedy.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-secondary small fw-bold">Şifre</label>
+                                    <input type="password" class="form-control bg-black text-white border-secondary" placeholder="••••••••">
+                                </div>
+                                <div class="text-end mb-3">
+                                    <a href="#" class="text-warning small text-decoration-none" onclick="gelistiriliyorUyarisi()">Şifremi Unuttum</a>
+                                </div>
+                                <button class="btn btn-warning w-100 fw-bold py-2 shadow" onclick="gelistiriliyorUyarisi()">Giriş Yap</button>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-register" role="tabpanel">
+                                <div class="mb-3">
+                                    <label class="form-label text-secondary small fw-bold">Kullanıcı Adı</label>
+                                    <input type="text" class="form-control bg-black text-white border-secondary" placeholder="KullaniciAdi">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-secondary small fw-bold">E-Posta Adresi</label>
+                                    <input type="email" class="form-control bg-black text-white border-secondary" placeholder="mail@ornek.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-secondary small fw-bold">Şifre</label>
+                                    <input type="password" class="form-control bg-black text-white border-secondary" placeholder="••••••••">
+                                </div>
+                                <button class="btn btn-warning w-100 fw-bold py-2 shadow" onclick="gelistiriliyorUyarisi()">Hesap Oluştur</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-black py-4 mt-auto border-top border-dark text-center">
+            <div class="container">
+                <h5 class="fw-bold mb-3"><span class="text-warning">DD</span> DropDeal</h5>
+                <p class="text-secondary small mb-0">&copy; 2026 DropDeal. Tüm hakları saklıdır.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
