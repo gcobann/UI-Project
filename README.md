@@ -1,39 +1,39 @@
-# DropDeal - Dijital İtem ve Oyun Eşyası Pazarı
+# DropDeal - Digital Item and Game Asset Marketplace
 
-DropDeal, oyuncuların oyun içi eşyalarını (skin, bıçak, VP, GB vb.) güvenle inceleyebileceği ve yönetim simülasyonu yapabileceği modern, kullanıcı dostu bir pazar yeri arayüzü (UI) prototipidir. Bu proje, e-ticaret dinamiklerini oyuncu estetiğiyle birleştiren bir "Front-end" çalışmasıdır.
+DropDeal is a modern, user-friendly marketplace user interface (UI) prototype where players can securely examine in-game items (skins, knives, VP, GB, etc.) and perform management simulations. This project is a "Front-end" study that combines e-commerce dynamics with gamer aesthetics.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-* **Modern Karanlık Tema (Dark Mode):** Oyuncu kitlesine hitap eden, göz yormayan, Bootstrap 5 tabanlı modern siyah ve sarı renk paleti.
-* **Dinamik Sepet Sistemi:** Sayfa yenilenmeden çalışan, "Offcanvas" (yandan açılır menü) entegreli ve anlık fiyat hesaplaması yapan JavaScript tabanlı sepet modülü.
-* **Gelişmiş Pazar Yeri Filtrelemesi:** CS2, Valorant ve Knight Online kategorilerine veya fiyat aralığına göre anında sonuç veren filtreleme sistemi.
-* **Bento Grid Tasarımı:** Ana sayfada popüler kategorileri şık ve güncel trendlere uygun şekilde sergileyen ızgara (bento box) düzeni.
-* **Kullanıcı Paneli Simülasyonu:** Cüzdan bakiyesi yükleme, aktif ilanları yönetme ve geçmiş satın alımları listeleyen sekmeli profil sayfası tasarımı.
-* **Responsive (Mobil Uyumlu) Tasarım:** Mobil cihazlar, tabletler ve masaüstü bilgisayarlarda kusursuz çalışan esnek yapı.
+* **Modern Dark Mode:** A modern black and yellow color palette based on Bootstrap 5 that appeals to the gamer audience and is easy on the eyes.
+* **Dynamic Cart System:** A JavaScript-based cart module that works without page reloads, integrates with "Offcanvas" (side menu), and performs instant price calculations.
+* **Advanced Marketplace Filtering:** A filtering system that provides instant results based on CS2, Valorant, and Knight Online categories or price ranges.
+* **Bento Grid Design:** A grid (bento box) layout on the homepage that displays popular categories in a stylish and trendy way.
+* **User Panel Simulation:** A tabbed profile page design that lists wallet balance top-ups, active listing management, and past purchases.
+* **Responsive (Mobile Compatible) Design:** A flexible structure that works flawlessly on mobile devices, tablets, and desktop computers.
 
-## 🛠️ Kullanılan Teknolojiler
+## 🛠️ Technologies Used
 
-* **HTML5 & CSS3:** Sayfa iskeleti ve özel stillendirmeler (bento grid, hover animasyonları, backdrop-filter blur efektleri).
-* **JavaScript (Vanilla):** DOM manipülasyonu, sepet dizisi işlemleri, dinamik ürün filtreleme ve etkileşimli bakiye güncellemeleri.
-* **Bootstrap 5.3:** Grid sistemi, modallar (giriş/kayıt), offcanvas bileşenleri ve carousel (kampanya sliderı).
-* **FontAwesome 6.4:** Modern ve anlaşılır vektörel ikon seti.
+* **HTML5 & CSS3:** Page skeleton and custom stylings (bento grid, hover animations, backdrop-filter blur effects).
+* **JavaScript (Vanilla):** DOM manipulation, cart array operations, dynamic product filtering, and interactive balance updates.
+* **Bootstrap 5.3:** Grid system, modals (login/register), offcanvas components, and carousel (campaign slider).
+* **FontAwesome 6.4:** A modern and clear vector icon set.
 
-## 📂 Proje Yapısı
+## 📂 Project Structure
 
-* `index.html`: Kampanya slider'ı ve bentobox kategorilerin bulunduğu giriş sayfası.
-* `marketplace.html`: Ürünlerin listelendiği, detaylı filtreleme yapılabilen pazar yeri.
-* `detail.html` / `detailawp.html`: Ürün açıklamaları, satıcı puanları ve teslimat bilgilerini içeren özel ürün sayfaları.
-* `profile.html`: Cüzdan yönetimi, aktif ilanlar ve işlem geçmişinin bulunduğu kullanıcı merkezi.
-* `style.css`: Projeye özgü karanlık tema ayarları, özel animasyonlar ve responsive düzenlemeler.
-* `script.js`: Sepet mantığı, filtreleme algoritması ve UI etkileşimlerini yöneten temel dosya.
+* `index.html`: The landing page containing the campaign slider and bentobox categories.
+* `marketplace.html`: The marketplace where products are listed and detailed filtering can be done.
+* `detail.html` / `detailawp.html`: Custom product pages containing product descriptions, seller ratings, and delivery information.
+* `profile.html`: The user center containing wallet management, active listings, and transaction history.
+* `style.css`: Project-specific dark theme settings, custom animations, and responsive adjustments.
+* `script.js`: The core file managing the cart logic, filtering algorithm, and UI interactions.
 
-## 💻 Kurulum ve Çalıştırma
+## 💻 Installation and Execution
 
-Bu proje tamamen istemci tarafında (client-side) çalıştığı için herhangi bir sunucu kurulumuna gerek duymaz.
+Since this project runs entirely on the client-side, it does not require any server installation.
 
-1.  Projeyi bilgisayarınıza indirin.
-2.  `index.html` dosyasını herhangi bir web tarayıcısı (Chrome, Edge, Firefox vb.) ile açın.
-3.  Geliştirme aşamasındaysanız, VS Code "Live Server" eklentisi ile anlık değişiklikleri takip ederek çalıştırabilirsiniz.
+1. Download the project to your computer.
+2. Open the `index.html` file with any web browser (Chrome, Edge, Firefox, etc.).
+3. If you are in the development phase, you can run it using the VS Code "Live Server" extension to track instant changes.
 
 ---
-*Not: Bu proje bir UI (Kullanıcı Arayüzü) prototipidir. Giriş yapma, kayıt olma veya bakiye yükleme gibi işlemler şu an için simülasyon amaçlıdır ve bir veri tabanına bağlı değildir.*
+*Note: This project is a UI (User Interface) prototype. Actions such as logging in, registering, or topping up balance are currently for simulation purposes and are not connected to a database.*
