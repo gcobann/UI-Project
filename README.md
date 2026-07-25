@@ -2,7 +2,7 @@
 
 DropDeal is a modern, user-friendly marketplace user interface (UI) prototype where players can securely examine in-game items (skins, knives, VP, GB, etc.) and perform management simulations. This project is a "Front-end" study that combines e-commerce dynamics with gamer aesthetics.
 
-## 🚀 Features
+## Features
 
 * **Modern Dark Mode:** A modern black and yellow color palette based on Bootstrap 5 that appeals to the gamer audience and is easy on the eyes.
 * **Dynamic Cart System:** A JavaScript-based cart module that works without page reloads, integrates with "Offcanvas" (side menu), and performs instant price calculations.
@@ -11,14 +11,14 @@ DropDeal is a modern, user-friendly marketplace user interface (UI) prototype wh
 * **User Panel Simulation:** A tabbed profile page design that lists wallet balance top-ups, active listing management, and past purchases.
 * **Responsive (Mobile Compatible) Design:** A flexible structure that works flawlessly on mobile devices, tablets, and desktop computers.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **HTML5 & CSS3:** Page skeleton and custom stylings (bento grid, hover animations, backdrop-filter blur effects).
 * **JavaScript (Vanilla):** DOM manipulation, cart array operations, dynamic product filtering, and interactive balance updates.
 * **Bootstrap 5.3:** Grid system, modals (login/register), offcanvas components, and carousel (campaign slider).
 * **FontAwesome 6.4:** A modern and clear vector icon set.
 
-## 📂 Project Structure
+## Project Structure
 
 * `index.html`: The landing page containing the campaign slider and bentobox categories.
 * `marketplace.html`: The marketplace where products are listed and detailed filtering can be done.
@@ -27,7 +27,7 @@ DropDeal is a modern, user-friendly marketplace user interface (UI) prototype wh
 * `style.css`: Project-specific dark theme settings, custom animations, and responsive adjustments.
 * `script.js`: The core file managing the cart logic, filtering algorithm, and UI interactions.
 
-## 💻 Installation and Execution
+## Installation and Execution
 
 Since this project runs entirely on the client-side, it does not require any server installation.
 
